@@ -3,17 +3,17 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-rm -rf docs/dist
+#rm -rf docs/.vuepress/dist
 
 # 生成静态文件
-yarn run build
+#npm run docs:build
 
 # 进入生成的文件夹
-cd docs/dist
+#cd docs/.vuepress/dist
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m '更新文档'
 
 git push -f git@github.com:lonlyz/lonlyz.github.io.git master
 

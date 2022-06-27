@@ -7,6 +7,19 @@ export const navbarZh: NavbarConfig = [
     link: '/guide/',
   },
   {
+    text: '基础',
+    children: [
+      {
+        text: '集合',
+        children: [
+          '/basic/ArrayList.md',
+          '/basic/HashMap.md',
+          '/basic/LinkedList.md'
+        ],
+      },
+    ]
+  },
+  {
     text: "在线文档",
     ariaLabel: "在线文档",
     children: [

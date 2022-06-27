@@ -20,6 +20,17 @@ export const sidebarZh: SidebarConfig = {
       ],
     },
   ],
+  '/basic/': [
+    {
+      text: '集合',
+      collapsible: true,
+      children: [
+        '/basic/ArrayList.md',
+        '/basic/HashMap.md',
+        '/basic/LinkedList.md'
+      ],
+    },
+  ],
   '/advanced/': [
     {
       text: '深入',
