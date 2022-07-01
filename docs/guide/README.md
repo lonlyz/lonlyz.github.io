@@ -14,9 +14,9 @@ VuePress 诞生的初衷是为了支持 Vue.js 及其子项目的文档需求，
 
 在构建过程中，我们会为  VuePress 站点创建一个服务端渲染 (SSR) 的版本，然后通过虚拟访问每一条路径来渲染对应的 HTML 。这种做法的灵感来源于 [Nuxt](https://nuxtjs.org/) 的 `nuxt generate` 命令，以及其他的一些项目，比如 [Gatsby](https://www.gatsbyjs.org/)。
 
-## 为什么不是 ...?
+## 怎样搭建?
 
-### Nuxt
+### 克隆代码
 
 Nuxt 是一套出色的 Vue SSR 框架， VuePress 能做的事情，Nuxt 实际上也同样能够胜任。但 Nuxt 是为构建应用程序而生的，而 VuePress 则更为轻量化并且专注在以内容为中心的静态网站上。
 
@@ -34,6 +34,18 @@ VitePress 是 VuePress 的孪生兄弟，它同样由 Vue.js 团队创建和维�
 
 Hexo 一直驱动着 Vue 2.x 的文档。Hexo 最大的问题在于他的主题系统太过于静态以及过度地依赖纯字符串，而我们十分希望能够好好地利用 Vue 来处理我们的布局和交互。同时，Hexo 在配置 Markdown 渲染方面的灵活性也不是最佳的。
 
-### GitBook
+### 部署到云服务器
+
+使用到的插件[ssh-deploy](https://github.com/easingthemes/ssh-deploy)
+
+首先配置参数信息：
+1. 查看服务器有没有生成公钥私钥
+2. 确认ssh配置文件的配置是否如下(/etc/ssh/sshd_config)
+   RSAAuthentication yes
+   PubkeyAuthentication yes #这两项为打开公钥模式
+   AuthorizedKeysFile .ssh/authorized_keys #配置公钥记录文件
+   PasswordAuthentication yes #打开密码验证模式
+3. 
+
 
 过去我们的子项目文档一直都在使用 GitBook 。 GitBook 最大的问题在于当文件很多时，每次编辑后的重新加载时间长得令人无法忍受。它的默认主题导航结构也比较有限制性，并且，主题系统也不是 Vue 驱动的。GitBook 背后的团队如今也更专注于将其打造为一个商业产品而不是开源工具。
