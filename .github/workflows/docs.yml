@@ -55,3 +55,13 @@ jobs:
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+            SSH_PRIVATE_KEY: ${{ secrets.TENCENT_SSH_KEY }}
+            ARGS: "-rltgoDzvO --delete"
+            SOURCE: "dist/"
+            REMOTE_HOST: ${{ secrets.TENCENT_IP }}
+            REMOTE_USER: ${{ secrets.TENCENT_USER }}
+            TARGET: ${{ secrets.TENCENT_TARGET }}
+            EXCLUDE: "/dist/, /node_modules/"
