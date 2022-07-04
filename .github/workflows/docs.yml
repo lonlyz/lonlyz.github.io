@@ -55,13 +55,22 @@ jobs:
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@main
-        env:
-            SSH_PRIVATE_KEY: ${{ secrets.TENCENT_SSH_KEY }}
-            ARGS: "-rltgoDzvO --delete"
-            SOURCE: "docs/.vuepress/dist"
-            REMOTE_HOST: ${{ secrets.TENCENT_IP }}
-            REMOTE_USER: ${{ secrets.TENCENT_USER }}
-            TARGET: ${{ secrets.TENCENT_TARGET }}
-            EXCLUDE: "/dist/, /node_modules/"
+      - name: SSH Server Deploy
+        uses: kostya-ten/ssh-server-deploy@v4
+        with:
+          host: ${{ secrets.TENCENT_IP }}
+          port: 22
+          username: ${{ secrets.TENCENT_USER }}
+          password: ${{ secrets.TENCENT_PASSWOD }}
+          scp_source: "docs/.vuepress/dist"
+          scp_target: ${{ secrets.TENCENT_TARGET }}
+#       - name: Deploy to Server
+#         uses: easingthemes/ssh-deploy@main
+#         env:
+#             #SSH_PRIVATE_KEY: ${{ secrets.TENCENT_SSH_KEY }}
+#             ARGS: "-rltgoDzvO --delete"
+#             SOURCE: "docs/.vuepress/dist"
+#             REMOTE_HOST: ${{ secrets.TENCENT_IP }}
+#             REMOTE_USER: ${{ secrets.TENCENT_USER }}
+#             TARGET: ${{ secrets.TENCENT_TARGET }}
+#             EXCLUDE: "/dist/, /node_modules/"
