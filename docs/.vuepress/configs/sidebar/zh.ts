@@ -30,6 +30,45 @@ export const sidebarZh: SidebarConfig = {
         '/basic/LinkedList.md'
       ],
     },
+    {
+      text: '其它',
+      collapsible: true,
+      children: [
+        '/basic/deploy.md',
+        '/basic/design.md',
+        '/basic/jvm.md',
+        '/basic/securityManager.md',
+        '/basic/docker.md',
+        '/basic/linux.md',
+        '/basic/maven.md'
+      ],
+    },
+  ],
+  '/construct/': [
+    {
+      text: '框架',
+      collapsible: true,
+      children: [
+        '/construct/dubbo.md',
+        '/construct/mybatis_analyse.md',
+        '/construct/spring_analyse.md',
+        '/construct/springboot.md',
+        '/construct/springcloud.md',
+        '/construct/zookeeper.md',
+      ],
+    },
+  ],
+  '/db/': [
+    {
+      text: '数据库',
+      collapsible: true,
+      children: [
+        '/db/elasticsearch.md',
+        '/db/mycat.md',
+        '/db/mysql.md',
+        '/db/redis.md',
+      ],
+    },
   ],
   '/advanced/': [
     {

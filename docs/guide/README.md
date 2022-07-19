@@ -40,6 +40,11 @@ Hexo 一直驱动着 Vue 2.x 的文档。Hexo 最大的问题在于他的主题�
 
 首先配置参数信息：
 1. 查看服务器有没有生成公钥私钥
+   ls ~/.ssh
+
+   创建： 
+      1. ssh-keygen -m PEM -t rsa -b 4096
+      2. cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys  
 2. 确认ssh配置文件的配置是否如下(/etc/ssh/sshd_config)
    RSAAuthentication yes
    PubkeyAuthentication yes #这两项为打开公钥模式

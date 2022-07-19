@@ -17,6 +17,48 @@ export const navbarZh: NavbarConfig = [
           '/basic/LinkedList.md'
         ],
       },
+      {
+        text: '其它',
+        children: [
+          '/basic/deploy.md',
+          '/basic/design.md',
+          '/basic/jvm.md',
+          '/basic/securityManager.md',
+          '/basic/docker.md',
+          '/basic/linux.md',
+          '/basic/maven.md'
+        ],
+      },
+    ]
+  },
+  {
+    text: '框架',
+    children: [
+      {
+        text: '常用',
+        children: [
+          '/construct/dubbo.md',
+          '/construct/mybatis_analyse.md',
+          '/construct/spring_analyse.md',
+          '/construct/springboot.md',
+          '/construct/springcloud.md',
+          '/construct/zookeeper.md',
+        ],
+      },
+    ]
+  },
+  {
+    text: '数据库',
+    children: [
+      {
+        text: '常用',
+        children: [
+          '/db/elasticsearch.md',
+          '/db/mycat.md',
+          '/db/mysql.md',
+          '/db/redis.md',
+        ],
+      },
     ]
   },
   {
