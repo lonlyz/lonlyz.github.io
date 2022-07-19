@@ -1,8 +1,3 @@
----
-sidebar: auto
-editLink: false
----
-
 # 设计模式
 
 [TOC]
@@ -963,7 +958,7 @@ public class SingleTon_six {
 
 1. 创建策略接口
 
-   ```JAVA
+   ```java
    package com.lz.basic.design.strategy;
    
    public interface Strategy {

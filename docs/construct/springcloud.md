@@ -1,7 +1,3 @@
----
-sidebar: auto
----
-
 # Spring Cloud 入门
 
 > [小不点啊](https://www.cnblogs.com/leeSmall/p/8763181.html)
@@ -43,7 +39,7 @@ spring cloud eureka 是 spring cloud netflix 项目下的服务治理模块。�
 
 创建springboot项目，命名为eureka-server，并引入依赖：
 
-```pom
+```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>

@@ -1,7 +1,3 @@
----
-sidebar: auto
----
-
 # Spring Boot 入门
 
 ## 1、Spring Boot 简介
@@ -270,7 +266,7 @@ public @interface EnableAutoConfiguration {
 
 ​		将所有需要导入的组件以全类名的方式返回；这些组件就会被添加到容器中；
 
-​		会给容器中导入非常多的自动配置类（xxxAutoConfiguration）；就是给容器中导入这个场景需要的所有组件，并配置好这些组件；		![自动配置类](images/搜狗截图20180129224104.png)
+​		会给容器中导入非常多的自动配置类（xxxAutoConfiguration）；就是给容器中导入这个场景需要的所有组件，并配置好这些组件；		![自动配置类](/construct/springboot/搜狗截图20180129224104.png)
 
 有了自动配置类，免去了我们手动编写配置注入功能组件等的工作；
 
@@ -320,7 +316,8 @@ IDE都支持使用Spring的项目创建向导快速创建一个Spring Boot项目
 
 ## **重要：**
 
-```properties
+```tex
+# properties
 # 切换profile
   # yml有文档块的   ---回车
   # 1. 配置文件配置： program argument: spring.profiles.active=dev
@@ -704,7 +701,8 @@ ${random.int(10)}、${random.int[1024,65536]}
 
 ### 2、占位符获取之前配置的值，如果没有可以是用:指定默认值
 
-```properties
+```tex
+# properties
 person.last-name=张三${random.uuid}
 person.age=${random.int}
 person.birth=2017/12/15
@@ -876,7 +874,8 @@ java -jar spring-boot-02-config-02-0.0.1-SNAPSHOT.jar --server.port=8087  --serv
 
 **==将 类路径下  META-INF/spring.factories 里面配置的所有EnableAutoConfiguration的值加入到了容器中；==**
 
-```properties
+``` tex
+# properties
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
@@ -1303,7 +1302,8 @@ SpringBoot默认帮我们配置好了日志；
         %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n
 SpringBoot修改日志的默认配置
 
-```properties
+```tex
+# properties
 logging.level.com.atguigu=trace  #指定包名的缓存级别
 
 
@@ -1667,7 +1667,8 @@ public class ThymeleafProperties {
 
 2）、表达式？
 
-```properties
+```tex
+# properties
 Simple expressions:（表达式语法）
     Variable Expressions: ${...}：获取变量值；OGNL；
     		1）、获取对象的属性、调用方法
@@ -1739,7 +1740,7 @@ Special tokens:
     No-Operation: _ 
 ```
 
-<font color="LightCoral">**补充：#{} 与springboot进行整合的时候**</font>
+<div color="LightCoral">**补充：#{} 与springboot进行整合的时候**</div>
 
 spring.messages.baseName->默认是messages     MessageSourceProperties.Class
 
@@ -1818,7 +1819,7 @@ Spring Boot 自动配置好了SpringMVC
 
 - Inclusion of `ContentNegotiatingViewResolver` and `BeanNameViewResolver` beans.
   - 自动配置了ViewResolver（视图解析器：根据方法的返回值得到视图对象（View），视图对象决定如何渲染（转发？重定向？））
-  - ContentNegotiatingViewResolver：组合所有的视图解析器的；<font color="red">内容协商</font>
+  - ContentNegotiatingViewResolver：组合所有的视图解析器的；<div color="red">内容协商</div>
     - 可以定制根据请求后缀返回不同的数据
     - 可以通过accept头信息
   - ==如何定制：我们可以自己给容器中添加一个视图解析器；自动的将其组合进来；==
@@ -2799,7 +2800,8 @@ SpringBoot默认使用Tomcat作为嵌入式的Servlet容器；
 
 1、修改和server有关的配置（ServerProperties【也是EmbeddedServletContainerCustomizer】）；
 
-```properties
+```tex
+# properties
 server.port=8081
 server.context-path=/crud
 
@@ -3812,7 +3814,8 @@ static class Generic {
 
 默认只需要将文件命名为：
 
-```properties
+```tex
+# properties
 schema-*.sql、data-*.sql
 默认规则：schema.sql，schema-all.sql；
 可以使用   
@@ -4178,7 +4181,8 @@ public class HelloSpringApplicationRunListener implements SpringApplicationRunLi
 
 配置（META-INF/spring.factories）
 
-```properties
+```tex
+# properties
 org.springframework.context.ApplicationContextInitializer=\
 com.atguigu.springboot.listener.HelloApplicationContextInitializer
 
@@ -4452,7 +4456,7 @@ public class DatabaseCacheService implements CacheService {
 
 ## 缓存注解：
 
-![1548720562931](/construct/springboot/%5CUsers%5Cadmin%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1548720562931.png)
+![1548720562931](/construct/springboot/1548720562931.png)
 
 ![](/construct/springboot/TIM截图20190129082810.png)
 

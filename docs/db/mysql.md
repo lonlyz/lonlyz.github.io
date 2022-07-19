@@ -438,7 +438,7 @@ InnoDB表，无论表空间类型如何，均不具有自由移动性质。每�
 
 ​		![文件结构示例图](/db/mysql/mysql_file_construct.png)
 
-```mysql
+```sql
 show engines;
 ```
 
@@ -493,26 +493,26 @@ mysql的索引分为**单列索引**(主键索引,唯一索引,普通索引)和*
 
 单列索引：只使用一张表的某一个字段创建索引(idx_tableName_tableField)；
 
-```mysql
+```sql
 create [UNIQUE 区别是不是唯一索引] index idx_tableName_tableField on tableName(tableField(length));
 alter tabkeName add [UNIQUE 区别是不是唯一索引] index idx_tableName_tableField on (tableField(length))
 ```
 
 组合索引：只使用一张表的某一个字段创建索引(idx_tableName_tableField)；
 
-```mysql
+```sql
 create index idx_tableName_tableField on tableName(tableField1,tableFiel2...);
 ```
 
 **查看索引：**
 
-```mysql
+```sql
 show index from tableName;
 ```
 
 **删除索引**：
 
-```mysql
+```sql
 Drop index indexName on tableName;
 ```
 
@@ -582,7 +582,7 @@ Drop index indexName on tableName;
 
 ​	怎样使用：
 
-```mysql
+```sql
 			explain sql语句....;
 			explain sql语句\G    #key-value键值对展示
 ```
@@ -905,7 +905,7 @@ Drop index indexName on tableName;
 
    4.3.1 命令行的操作
 
-   ```mysql
+   ```sql
    #查看慢查询日志的状态以及文件名称
    show variables like '%slow_query_log%'; 
    #开启慢查询日志，临时生效，重启之后就失效
@@ -942,7 +942,7 @@ Drop index indexName on tableName;
 
 *： 在命令行界面创建MySQL函数，语句中会包含许多分号(结束标记)，因此需要定义另外一种结束标记符号。
 
-```mysql
+```sql
 # 定义 $$为结束标记
 DELIMITER $$
 ...
@@ -970,7 +970,7 @@ exp:
 
 2. ####  查看是否show profile状态
 
-   ```mysql
+   ```sql
    show variables like 'profiling';
    # 开启profile
    set profiling = on; 
@@ -978,7 +978,7 @@ exp:
 
 3. ### show profile 使用方法
 
-   ```mysql
+   ```sql
    #1. 开启profile 
    set profiling = on; 
    #2. 运行sql语句
@@ -1019,7 +1019,7 @@ exp:
 
 3. 命令启用
 
-   ```mysql
+   ```sql
    #开启
    set global general_log = 1;
    set global log_output = 'TABLE';
@@ -1036,7 +1036,7 @@ exp:
 
 表锁的命令：
 
-```mysql
+```sql
 # 查看有没有锁 查看 in_use 是否为1-加锁
 1. show open tables;
 # 添加锁的命令
@@ -1056,7 +1056,7 @@ exp:
    2. MyISAM读写调度是写优先，因此不适合做写为主的表引擎。
    ```
 
-   ```mysql
+   ```sql
    #1. sessionA 对一张A表加*读*锁，只可以对A表进行查询。不能更新A表和查询其它表。
    #	sessionB 对A表可以查询，对其他表也可以进行查询更新，但是更新A表时，会阻塞到更新的地方，等待A表释放锁才可以更新数据。
    #2. sessionA 对一张A表加*写*锁，可以对表进行读和更新，不能查询和更新其它表。
@@ -1076,7 +1076,7 @@ exp:
 
    ![事务](/db/mysql/mysql_transaction_basic.png)
 
-   ```mysql
+   ```sql
    #查看默认事务隔离级别
    show variables like '%tx_isolation%';
    # 分析表行锁定 
@@ -1103,7 +1103,7 @@ exp:
 
    **手动给某行数据添加锁：**
 
-   ```mysql
+   ```sql
    # 锁定where条件的行
    select * from ${tableName} where ... for update;
    # commit之后取消锁定

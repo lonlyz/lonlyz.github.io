@@ -6,12 +6,12 @@
     "docs:dev": "vuepress dev docs"
   },
   "dependencies": {
-    "@vuepress/plugin-docsearch": "^2.0.0-beta.48",
-    "@vuepress/plugin-search": "^2.0.0-beta.48",
     "@vuepress/bundler-vite": "v2.0.0-beta.48",
-    "@vuepress/bundler-webpack": "v2.0.0-beta.48",
+    "@vuepress/bundler-webpack": "^2.0.0-beta.48",
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.48",
     "@vuepress/plugin-google-analytics": "v2.0.0-beta.48",
     "@vuepress/plugin-register-components": "v2.0.0-beta.48",
+    "@vuepress/plugin-search": "^2.0.0-beta.48",
     "@vuepress/plugin-shiki": "v2.0.0-beta.48",
     "vuepress-vite": "^2.0.0-beta.48"
   }

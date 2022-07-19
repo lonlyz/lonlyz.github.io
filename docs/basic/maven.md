@@ -1,6 +1,3 @@
----
-sidebar: auto
----
 # Maven
 
 1. 安装jar到本地的maven仓库

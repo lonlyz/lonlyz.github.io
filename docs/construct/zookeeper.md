@@ -1,9 +1,3 @@
----
-sidebarDepth: 3
-sidebar: auto
-editLink: false
----
-
 # Zookeeper
 
 ## 概述

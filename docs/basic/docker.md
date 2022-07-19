@@ -1,6 +1,3 @@
----
-sidebar: auto
----
 # Docker 使用和各个软件的安装
 
 > [常见的问题](https://www.cnblogs.com/276815076/p/4673607.html)
@@ -266,7 +263,7 @@ docker run --name mysql_learn -p 3306:3306 -v /docker/mysql/mysql-learn/data:/va
 
 ##### 6.2 配置Dockerfile
 
-```dockerfile
+```docker
 # First docker file from yiban
 # VERSION 0.0.1
 # Author: lz

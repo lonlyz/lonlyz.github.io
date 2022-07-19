@@ -1,8 +1,3 @@
----
-sidebar: auto
-editLink: false
----
-
 # SecurityManager
 
 ## 应用场景
@@ -30,7 +25,9 @@ editLink: false
 
 #### 默认配置文件解释
 
-```java.policy
+```md
+
+java.policy
 
 // Standard extensions get all permissions by default
 

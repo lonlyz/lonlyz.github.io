@@ -1,9 +1,3 @@
----
-sidebarDepth: 3
-sidebar: auto
-editLink: false
----
-
 # Mybatis源码分析
 
 > [mybatis源码分析](https://www.cnblogs.com/angelica-duhurica/category/1489346.html)

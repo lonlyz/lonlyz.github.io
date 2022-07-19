@@ -1,12 +1,6 @@
----
-sidebarDepth: 3
-sidebar: auto
-editLink: false
----
-
 # Dubbo  
 
-docx文档:[尚硅谷-dubbo.docx](/constrct/dubbo/尚硅谷-dubbo.docx)
+docx文档:[尚硅谷-dubbo.docx](/construct/dubbo/尚硅谷-dubbo.docx)
 
 # 一、基础知识
 
@@ -26,7 +20,7 @@ docx文档:[尚硅谷-dubbo.docx](/constrct/dubbo/尚硅谷-dubbo.docx)
 
 ### 1.2）、发展演变
 
-![](/constrct/dubbo/1.jpg)​                                                  
+![发展演变](/construct/dubbo/1.jpg)​                                                  
 
  
 
@@ -34,7 +28,7 @@ docx文档:[尚硅谷-dubbo.docx](/constrct/dubbo/尚硅谷-dubbo.docx)
 
 当网站流量很小时，只需一个应用，将所有功能都部署在一起，以减少部署节点和成本。此时，用于简化增删改查工作量的数据访问框架(ORM)是关键。
 
-   ![](/constrct/dubbo/2.png)
+   ![单一应用架构](/construct/dubbo/2.png)
 
 适用于小型网站，小型管理系统，将所有功能都部署到一个功能里，简单易用。
 
@@ -50,7 +44,7 @@ docx文档:[尚硅谷-dubbo.docx](/constrct/dubbo/尚硅谷-dubbo.docx)
 
 当访问量逐渐增大，单一应用增加机器带来的加速度越来越小，将应用拆成互不相干的几个应用，以提升效率。此时，用于加速前端页面开发的Web框架(MVC)是关键。
 
-![](/constrct/dubbo/3.png)   
+![垂直应用架构](/construct/dubbo/3.png)   
 
 通过切分业务来实现各个模块独立部署，降低了维护和部署的难度，团队各司其职更易管理，性能扩展也更方便，更有针对性。
 
@@ -60,7 +54,7 @@ docx文档:[尚硅谷-dubbo.docx](/constrct/dubbo/尚硅谷-dubbo.docx)
 
 当垂直应用越来越多，应用之间交互不可避免，将核心业务抽取出来，作为独立的服务，逐渐形成稳定的服务中心，使前端应用能更快速的响应多变的市场需求。此时，用于提高业务复用及整合的**分布式服务框架****(RPC)**是关键。
 
-![](/constrct/dubbo/4.png)   
+![分布式服务架构](/construct/dubbo/4.png)   
 
  
 
@@ -68,7 +62,7 @@ docx文档:[尚硅谷-dubbo.docx](/constrct/dubbo/尚硅谷-dubbo.docx)
 
 当服务越来越多，容量的评估，小服务资源的浪费等问题逐渐显现，此时需增加一个调度中心基于访问压力实时管理集群容量，提高集群利用率。此时，用于**提高机器利用率的资源调度和治理中心****(SOA)[ Service Oriented Architecture]****是关键**。
 
-![](/constrct/dubbo/5.png)   
+![流动计算架构](/construct/dubbo/5.png)   
 
 ### 1.3）、RPC
 
@@ -78,9 +72,9 @@ RPC【Remote Procedure Call】是指远程过程调用，是一种进程间通�
 
 #### RPC基本原理
 
-![](/constrct/dubbo/6.png)   
+![RPC基本原理](/construct/dubbo/6.png)   
 
-   ![](/constrct/dubbo/7.png)
+   ![RPC基本原理](/construct/dubbo/7.png)
 
 RPC两个核心模块：通讯，序列化。
 
@@ -98,7 +92,7 @@ Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源Ja
 
 ### 2.2）、基本概念
 
- ![](/constrct/dubbo/8.png)  
+ ![基本概念](/construct/dubbo/8.png)  
 
 **服务提供者（Provider****）**：暴露服务的服务提供方，服务提供者在启动时，向注册中心注册自己提供的服务。
 
@@ -146,11 +140,11 @@ dubbo本身并不是一个服务软件。它其实就是一个jar包能够帮你
 | 3、打包dubbo-admin   mvn clean package -Dmaven.test.skip=true |
 | 4、运行dubbo-admin   java -jar dubbo-admin-0.0.1-SNAPSHOT.jar   **注意：【有可能控制台看着启动了，但是网页打不开，需要在控制台按下****ctrl+c****即可】**   默认使用root/root 登陆 |
 
- ![1](/constrct/dubbo/9.png)
+ ![1](/construct/dubbo/9.png)
 
- ![](/constrct/dubbo/10.png)
+ ![](/construct/dubbo/10.png)
 
- ![](/constrct/dubbo/11.png)
+ ![](/construct/dubbo/11.png)
 
 # TODO...
 

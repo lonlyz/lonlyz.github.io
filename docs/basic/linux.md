@@ -1,6 +1,3 @@
----
-sidebar: auto
----
 # Linux
 
 1. 设置防火墙的限制的端口

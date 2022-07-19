@@ -1,8 +1,3 @@
----
-sidebar: auto
-editLink: false
----
-
 # JVM内存管理
 
 > [[博客园左潇龙的技术博客](http://www.cnblogs.com/zuoxiaolong)]
